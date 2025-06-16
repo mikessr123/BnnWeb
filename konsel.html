@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layanan Konseling - Badan Narkotika Nasional</title>
+    <title>Layanan Konseling</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="img/bnn.gif" alt="Logo BNN" class="me-2" style="height: 40px; width: 40px;">
-                BNN RI Prvinsi SulSel
+                BNNP Provinsi SulSel
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="sosial.html">Sosialisasi</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="infobukti.html">Informasi Barang Bukti</a>
+                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Kontak</a>
                     </li> -->
@@ -44,11 +47,11 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold">Layanan Konseling BNN</h1>
+                    <h1 class="display-4 fw-bold">Layanan Konseling BNNP SulSel</h1>
                     <p class="lead">Konseling profesional untuk membantu Anda dan keluarga menghadapi tantangan ketergantungan narkoba. Kami siap mendampingi proses pemulihan Anda.</p>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 p-3">
                         <a href="#jadwal" class="btn btn-light btn-lg">Jadwal Konseling</a>
-                        <a href="#konsultasi" class="btn btn-outline-light btn-lg">Konsultasi Online</a>
+                        <a href="https://wa.me/6281291080030" target="_blank" class="btn btn-outline-light btn-lg">Layanan Hotline</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -106,7 +109,7 @@
     <!-- Jadwal Konseling -->
     <section class="py-5 bg-light" id="jadwal">
         <div class="container">
-            <h2 class="text-center mb-5">Jadwal Konseling</h2>
+            <h2 class="text-center mb-5">Jadwal Layanan</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="table-responsive">
@@ -117,27 +120,16 @@
                                     <th>Hari</th>
                                     <th>Waktu</th>
                                     <th>Lokasi</th>
+                                    <th>Khusus Hari Jumat</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Konseling Individu</td>
-                                    <td>Senin - Jumat</td>
-                                    <td>09.00 - 16.00</td>
+                                    <td>Senin - Kamis</td>
+                                    <td>08.00 - 16.00 WITA</td>
                                     <td>Ruang Konseling Lt. 2</td>
-                                </tr>
-                                <tr>
-                                    <td>Konseling Keluarga</td>
-                                    <td>Selasa & Kamis</td>
-                                    <td>13.00 - 17.00</td>
-                                    <td>Ruang Keluarga Lt. 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Konseling Kelompok</td>
-                                    <td>Rabu & Sabtu</td>
-                                    <td>10.00 - 12.00</td>
-                                    <td>Aula Utama</td>
-                                </tr>
+                                    <td>08.00 - 16.30 WITA</td>                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -147,49 +139,65 @@
     </section>
 
     <!-- Tim Konselor -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Tim Konselor Profesional Kami</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card border-0 shadow">
-                        <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Siti Rahma</h5>
-                            <p class="card-text">Psikolog Klinis</p>
-                        </div>
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Tim Profesional Kami</h2>
+        <div class="row g-4">
+            <!-- Konselor 1 -->
+            <div class="col-md-3">
+                <div class="card border-0 shadow h-100">
+                    <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. Siti Rahma</h5>
+                        <p class="card-text">Psikolog Klinis</p>
+                        <p><strong>Riwayat Praktik:</strong><br>RSUD Makassar (2015 - Sekarang)</p>
+                        <p><strong>Pendidikan:</strong><br>S2 Psikologi UI, S3 Psikologi UGM</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow">
-                        <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Budi Santoso</h5>
-                            <p class="card-text">Konselor Adiksi</p>
-                        </div>
+            </div>
+
+            <!-- Konselor 2 -->
+            <div class="col-md-3">
+                <div class="card border-0 shadow h-100">
+                    <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. Budi Santoso</h5>
+                        <p class="card-text">Konselor Adiksi</p>
+                        <p><strong>Riwayat Praktik:</strong><br>Pusat Rehabilitasi BNN (2013 - Sekarang)</p>
+                        <p><strong>Pendidikan:</strong><br>S2 Bimbingan Konseling UNJ, S3 Kesehatan Masyarakat UNAIR</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow">
-                        <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Maya Putri</h5>
-                            <p class="card-text">Terapis Keluarga</p>
-                        </div>
+            </div>
+
+            <!-- Konselor 3 -->
+            <div class="col-md-3">
+                <div class="card border-0 shadow h-100">
+                    <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. Maya Putri</h5>
+                        <p class="card-text">Terapis Keluarga</p>
+                        <p><strong>Riwayat Praktik:</strong><br>Rumah Konseling Makassar (2016 - Sekarang)</p>
+                        <p><strong>Pendidikan:</strong><br>S2 Psikologi Keluarga UGM, S3 Terapi Sistemik UK</p>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow">
-                        <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dr. Adi Wijaya</h5>
-                            <p class="card-text">Psikiater</p>
-                        </div>
+            </div>
+
+            <!-- Konselor 4 -->
+            <div class="col-md-3">
+                <div class="card border-0 shadow h-100">
+                    <img src="img/doktor-RSUD-Kelett-1-400x400.jpg" class="card-img-top" alt="Konselor">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. Adi Wijaya</h5>
+                        <p class="card-text">Psikiater</p>
+                        <p><strong>Riwayat Praktik:</strong><br>RS Jiwa Sulsel (2010 - Sekarang)</p>
+                        <p><strong>Pendidikan:</strong><br>S2 Kedokteran Udayana, Sp.KJ FKUI</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Form Konsultasi -->
     <section class="py-5 bg-light" id="konsultasi">
@@ -199,7 +207,7 @@
                     <div class="card border-0 shadow">
                         <div class="card-body p-5">
                             <h2 class="text-center mb-4">Daftar Konsultasi Online</h2>
-                            <form>
+                            <form method="POST" action="https://script.google.com/macros/s/AKfycbw1KqIQZEZ0hU-PYl6wjpC0496goeY6TmDd5XVYsnaoUyn-O6ECPbdJmFrTwMtBcGnC/exec">
                                 <div class="mb-3">
                                     <label for="nama" class="form-label">Nama Lengkap</label>
                                     <input type="text" class="form-control" id="nama" required>
@@ -216,9 +224,9 @@
                                     <label for="jenis" class="form-label">Jenis Konseling</label>
                                     <select class="form-select" id="jenis" required>
                                         <option value="">Pilih Jenis Konseling</option>
-                                        <option value="individu">Konseling Individu</option>
-                                        <option value="keluarga">Konseling Keluarga</option>
-                                        <option value="kelompok">Konseling Kelompok</option>
+                                        <option value="Konseling Individu">Konseling Individu</option>
+                                        <option value="Konseling Keluarga">Konseling Keluarga</option>
+                                        <option value="Konseling Kelompok">Konseling Kelompok</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -235,6 +243,32 @@
             </div>
         </div>
     </section>
+
+    <script>
+document.getElementById("formKonseling").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const params = new URLSearchParams();
+  for (const pair of formData) {
+    params.append(pair[0], pair[1]);
+  }
+
+  fetch("https://script.google.com/macros/s/AKfycb....../exec", {
+    method: "POST",
+    body: params
+  })
+  .then(response => response.text())
+  .then(result => {
+    alert("Permintaan Anda telah dikirim.");
+    document.getElementById("formKonseling").reset();
+  })
+  .catch(error => {
+    alert("Terjadi kesalahan. Silakan coba lagi.");
+    console.error("Error:", error);
+  });
+});
+</script>
 
     <!-- FAQ -->
     <section class="py-5">
@@ -308,7 +342,7 @@
             </div>
             <hr>
             <div class="text-center">
-                <p class="mb-0">&copy; 2025 Badan Narkotika Nasional. Hak Cipta Dilindungi.</p>
+                <p class="mb-0">&copy; 2025 BNNP SulSel. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>

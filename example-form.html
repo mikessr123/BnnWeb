@@ -1,0 +1,17 @@
+<form name="google-sheet">
+  <input name="Email" type="email" placeholder="Email" required>
+  <input name="Name" type="text" placeholder="Name" required>
+  <button type="submit">Send</button>
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyIvj5zafgYfsBG4e3bZLDKoUgRXpqrJ81dMKtM7DABVgSE9XisxGWJcBBxvbUgbhNb_A/exec';
+  const form = document.forms['google-sheet'];
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => alert("Thanks for contacting us!"))
+      .catch(error => console.error('Error!', error.message));
+  });
+</script>
