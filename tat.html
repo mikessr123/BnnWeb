@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran TAT</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">Pendaftaran TAT</h1>
+                <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST" enctype="multipart/form-data">
+
+                    <div class="mb-3">
+                        <label for="nama_penyidik" class="form-label">Nama Penyidik *</label>
+                        <input type="text" class="form-control" id="nama_penyidik" name="nama_penyidik" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="no_hp" class="form-label">No. HP/WA Yang Bisa Dihubungi *</label>
+                        <input type="tel" class="form-control" id="no_hp" name="no_hp" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="satker" class="form-label">Satker *</label>
+                        <input type="text" class="form-control" id="satker" name="satker" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nomor_lp" class="form-label">Nomor LP/LKN *</label>
+                        <input type="text" class="form-control" id="nomor_lp" name="nomor_lp" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tanggal_lp" class="form-label">Tanggal LP/LKN *</label>
+                        <input type="date" class="form-control" id="tanggal_lp" name="tanggal_lp" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="jumlah_tersangka" class="form-label">Jumlah Tersangka *</label>
+                        <input type="number" class="form-control" id="jumlah_tersangka" name="jumlah_tersangka" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tanggal_asesmen" class="form-label">Tanggal Asesmen *</label>
+                        <input type="date" class="form-control" id="tanggal_asesmen" name="tanggal_asesmen" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="upload_dokumen" class="form-label">Upload Dokumen (PDF max 10 file, max 10MB per file) *</label>
+                        <input type="file" class="form-control" id="upload_dokumen" name="upload_dokumen" accept="application/pdf" multiple required>
+                        <small class="form-text text-muted mt-2">
+                            Dokumen yang diupload:
+                            <ul>
+                                <li>Permohonan TAT</li>
+                                <li>Kartu Identitas</li>
+                                <li>Laporan Informasi</li>
+                                <li>Berita Acara Interogasi</li>
+                                <li>Surat Perintah Penangkapan</li>
+                                <li>Surat Keterangan Hasil Pemeriksaan Urine Positif</li>
+                                <li>Data Dukung (Screenshot)</li>
+                            </ul>
+                        </small>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input" type="checkbox" value="" id="pernyataan" name="pernyataan" required>
+                        <label class="form-check-label" for="pernyataan">
+                            Saya menyatakan bahwa data dan dokumen yang saya kirimkan adalah benar dan dapat dipertanggungjawabkan.
+                        </label>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Kirim Pendaftaran</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

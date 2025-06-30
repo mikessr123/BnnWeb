@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - REAN BNN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom right, #e0f0ff, #ffffff);
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px 30px 30px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            position: relative;
+        }
+
+        .login-header {
+            background: linear-gradient(to right, #1e90ff, #00bfff);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            right: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container select,
+        .login-container input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #1e90ff, #00bfff);
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .login-container button:hover {
+            background: linear-gradient(to right, #00bfff, #1e90ff);
+        }
+
+        #error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-header">Masuk Sebagai Admin</div>
+
+    <label for="destination">Pilih Tujuan Login:</label>
+    <select id="destination" required>
+        <option value="">-- Pilih Tujuan --</option>
+        <option value="https://youtube.com/MAGANG">Pendaftaran Magang</option>
+        <option value="https://boss.bnn.go.id/admin_skhpn/lihat_permohonan_skhpn">Data SKHPN</option>
+        <option value="https://youtube.com/MOU">Data MOU</option>
+        <option value="https://youtube.com/TAT">Pendaftaran TAT</option>
+    </select>
+
+    <input type="text" id="username" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button onclick="login()">MASUK</button>
+    <p id="error"></p>
+</div>
+
+<script>
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const destination = document.getElementById('destination').value;
+
+        if (!destination) {
+            document.getElementById('error').innerText = 'Silakan pilih tujuan login terlebih dahulu.';
+            return;
+        }
+
+        if (username === 'BNN' && password === '12345') {
+            window.location.href = destination;
+        } else {
+            document.getElementById('error').innerText = 'Email atau Password salah!';
+        }
+    }
+</script>
+
+</body>
+</html>

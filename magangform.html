@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir REAN BNN</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Formulir REAN BNN</h1>
+        <form id="bnnForm">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Aktif</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="age">Usia</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Jenis Kelamin</label>
+            <select id="gender" name="gender" required>
+                <option value="">-- Pilih Jenis Kelamin --</option>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <label for="message">Pesan atau Saran</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+        <div class="success-message" id="successMessage">Form berhasil dikirim! Terima kasih!</div>
+    </div>
+
+    <script>
+        // Ganti URL berikut dengan URL Web App Google Apps Script kamu
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzcy1mUms7l8aMb3Do7Zl0G6ZWGDqgS1qAHiVNFW_uviwJUpHpm2JEpN2uixkSKY-d2JQ/exec';
+
+        document.getElementById('bnnForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const form = document.getElementById('bnnForm');
+            const formData = new FormData(form);
+
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('successMessage').style.display = 'block';
+                        form.reset();
+                    } else {
+                        alert('Gagal mengirim data. Silakan coba lagi.');
+                    }
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
+</body>
+
+</html>
